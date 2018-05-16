@@ -1,0 +1,84 @@
+<!--
+  ~ Copyright (C) 2018 Darijo Barucic, Seventoes
+  ~
+  ~  Licensed under the MIT License
+  ~
+  ~ Permission is hereby granted, free of charge, to any person obtaining a copy
+  ~ of this software and associated documentation files (the "Software"), to deal
+  ~ in the Software without restriction, including without limitation the rights
+  ~ to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
+  ~ copies of the Software, and to permit persons to whom the Software is
+  ~ furnished to do so, subject to the following conditions:
+  ~
+  ~ The above copyright notice and this permission notice shall be included in all
+  ~ copies or substantial portions of the Software.
+  ~
+  ~ THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
+  ~ IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
+  ~ FITNESS FOR A PARTICULAR PURPOSE AND NON-INFRINGEMENT. IN NO EVENT SHALL THE
+  ~ AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
+  ~ LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
+  ~ OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
+  ~ SOFTWARE.
+  -->
+
+<resources>
+
+    <!--¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯
+         Application's name. [DO NOT TRANSLATE] -->
+
+    <string name="app_name" translatable="false">Apple Pie</string>
+
+    <string name="label_details">Step Details</string>
+
+    <!--_________________________________________________________________________________________-->
+
+    <!--¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯
+        App state information  -->
+
+    <!-- Inform the user that the data is being loaded. [NO CHAR LIMIT] -->
+    <string name="loading_data">Please wait while loading recipes&#8230;</string>
+    <!-- Inform the user the need of internet connectivity to use the app. [NO CHAR LIMIT] -->
+    <string name="no_connection_error">Your device seems to be offline.\nPlease enable internet connection and retry.</string>
+    <!-- Inform the user that no data could be loaded. [NO CHAR LIMIT] -->
+    <string name="no_data_fetched">No data could be fetched. Please try again in a few moments.</string>
+    <!-- Default empty data text. [NO CHAR LIMIT] -->
+    <string name="no_info_available">N/A</string>
+
+    <!--_________________________________________________________________________________________-->
+
+
+
+    <!--¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯
+         Content descriptions -->
+
+    <string name="list_img_cd">Preview of the finished recipe.</string>
+    <string name="details_nav_prev_cd">Go to previous step.</string>
+    <string name="details_nav_next_cd">Go to next step.</string>
+    <string name="cd_arrow_step">Indicates that item is clickable.</string>
+    <string name="steps_image_cd">Image visualizing the step.</string>
+
+    <!--_________________________________________________________________________________________-->
+
+    <!--¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯
+        Misc -->
+
+    <string name="list_servings">~ %1$d servings</string>
+    <string name="ingredients_title">Ingredients for %1$s</string>
+    <string name="ingredients_title_name">Ingredient</string>
+    <string name="ingredients_title_quant">Quantity</string>
+    <string name="ingredients_title_unit">Unit</string>
+    <string name="steps_count_seperator">%1$d)</string>
+    <string name="navigation_details">%1$d / %2$d</string>
+
+    <!--_________________________________________________________________________________________-->
+
+    <!--¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯
+        Widget -->
+
+    <string name="configure_widget_header">Choose recipe</string>
+    <string name="widget_ingredients">%1$s %2$s of %3$s</string>
+
+    <!--_________________________________________________________________________________________-->
+
+</resources>

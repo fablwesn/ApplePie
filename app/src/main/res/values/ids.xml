@@ -1,0 +1,90 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+  ~ Copyright (C) 2018 Darijo Barucic, Seventoes
+  ~
+  ~  Licensed under the MIT License
+  ~
+  ~ Permission is hereby granted, free of charge, to any person obtaining a copy
+  ~ of this software and associated documentation files (the "Software"), to deal
+  ~ in the Software without restriction, including without limitation the rights
+  ~ to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
+  ~ copies of the Software, and to permit persons to whom the Software is
+  ~ furnished to do so, subject to the following conditions:
+  ~
+  ~ The above copyright notice and this permission notice shall be included in all
+  ~ copies or substantial portions of the Software.
+  ~
+  ~ THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
+  ~ IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
+  ~ FITNESS FOR A PARTICULAR PURPOSE AND NON-INFRINGEMENT. IN NO EVENT SHALL THE
+  ~ AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
+  ~ LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
+  ~ OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
+  ~ SOFTWARE.
+  -->
+
+<resources>
+
+    <!--¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯
+         Main Activity -->
+
+    <item name="refresh_lay_main" type="id" />
+    <item name="recycler_view_main" type="id" />
+    <item name="progress_bar_main" type="id" />
+    <item name="text_empty_main" type="id" />
+    <item name="text_list_item_name_main" type="id" />
+    <item name="text_list_item_servings_main" type="id" />
+    <item name="img_list_item_main" type="id" />
+    <item name="card_list_item_main" type="id" />
+
+    <!--_________________________________________________________________________________________-->
+
+
+    <!--¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯
+         Recipe Activity -->
+
+    <item name="parent_steps_item" type="id" />
+    <item name="master_list_container" type="id" />
+    <item name="details_fragment" type="id" />
+    <item name="details_container" type="id" />
+    <item name="ingredients_title_text" type="id" />
+    <item name="ingredients_recycler" type="id" />
+    <item name="steps_recycler" type="id" />
+    <item name="ingredients_name" type="id" />
+    <item name="ingredients_quant" type="id" />
+    <item name="ingredients_unit" type="id" />
+    <item name="steps_number_text" type="id" />
+    <item name="steps_title_text" type="id" />
+
+    <!--_________________________________________________________________________________________-->
+
+    <!--¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯
+         Details -->
+
+    <item name="exo_player_steps" type="id" />
+    <item name="text_description_steps" type="id" />
+    <item name="details_player_img" type="id" />
+    <item name="details_previous_img" type="id" />
+    <item name="details_next_img" type="id" />
+    <item name="details_nav_text" type="id" />
+    <item name="cardview_details_desc" type="id" />
+    <item name="details_nav_linlay" type="id" />
+    <item name="cardview_details_player" type="id" />
+
+    <!--_________________________________________________________________________________________-->
+
+
+    <!--¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯
+         Widget -->
+
+    <item name="widget_header_text" type="id" />
+    <item name="widget_ingredients_text" type="id" />
+    <item name="widget_config_header_text" type="id" />
+    <item name="widget_config_recycler" type="id" />
+    <item name="widget_config_pb" type="id" />
+    <item name="widget_config_item_text" type="id" />
+    <item name="widget_config_cardview" type="id" />
+
+    <!--_________________________________________________________________________________________-->
+
+</resources>

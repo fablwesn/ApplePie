@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="utf-8"?><!--
+  ~ Copyright (C) 2018 Darijo Barucic, Seventoes
+  ~
+  ~  Licensed under the MIT License
+  ~
+  ~ Permission is hereby granted, free of charge, to any person obtaining a copy
+  ~ of this software and associated documentation files (the "Software"), to deal
+  ~ in the Software without restriction, including without limitation the rights
+  ~ to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
+  ~ copies of the Software, and to permit persons to whom the Software is
+  ~ furnished to do so, subject to the following conditions:
+  ~
+  ~ The above copyright notice and this permission notice shall be included in all
+  ~ copies or substantial portions of the Software.
+  ~
+  ~ THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
+  ~ IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
+  ~ FITNESS FOR A PARTICULAR PURPOSE AND NON-INFRINGEMENT. IN NO EVENT SHALL THE
+  ~ AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
+  ~ LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
+  ~ OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
+  ~ SOFTWARE.
+  -->
+<android.support.v7.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@id/card_list_item_main"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_margin="@dimen/default_space_medium"
+    app:cardBackgroundColor="@color/cardview_light_background"
+    app:cardCornerRadius="@dimen/default_space_medium"
+    app:cardElevation="@dimen/cardview_default_elevation"
+    app:contentPadding="@dimen/default_space_large">
+
+    <LinearLayout
+        android:layout_height="match_parent"
+        android:layout_width="match_parent"
+        android:orientation="horizontal">
+
+        <ImageView
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_margin="@dimen/default_space_medium"
+            android:id="@id/img_list_item_main"
+            android:layout_weight="2"
+            android:contentDescription="@string/list_img_cd"
+            android:scaleType="fitCenter" />
+
+        <TextView
+            android:id="@id/text_list_item_name_main"
+            android:layout_width="0dp"
+            android:layout_gravity="center"
+            android:textAlignment="center"
+            android:text="@string/no_info_available"
+            android:layout_margin="@dimen/default_space_medium"
+            android:textColor="@color/colorPrimaryDark"
+            android:textAppearance="@style/Base.TextAppearance.AppCompat.Headline"
+            android:layout_height="wrap_content"
+            android:layout_weight="5" />
+    </LinearLayout>
+
+    <TextView
+        android:id="@id/text_list_item_servings_main"
+        android:layout_width="wrap_content"
+        android:layout_gravity="bottom|end"
+        android:text="@string/no_info_available"
+        android:layout_margin="@dimen/default_space_medium"
+        android:textAppearance="@style/Base.TextAppearance.AppCompat.Subhead"
+        android:layout_height="wrap_content" />
+
+</android.support.v7.widget.CardView>
