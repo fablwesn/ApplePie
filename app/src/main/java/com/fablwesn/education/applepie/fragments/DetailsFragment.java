@@ -73,6 +73,10 @@ public class DetailsFragment extends Fragment {
     /*¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯
       Bindings and Globals */
 
+    public final static String KEY_STEP = "selected_step";
+    public final static String KEY_PLAYER_PLAYS = "is_playing_exo";
+    public static final String KEY_NUMB = "step_number";
+    public static final String KEY_PLAYER_POS = "stopped_play_at";
     @BindView(R.id.text_description_steps)
     TextView descriptionText;
     @BindView(R.id.details_nav_text)
@@ -81,14 +85,8 @@ public class DetailsFragment extends Fragment {
     ImageView playerImage;
     @BindView(R.id.exo_player_steps)
     PlayerView exoPlayerView;
-
     @BindDrawable(R.drawable.ic_no_media)
     Drawable noMediaDraw;
-
-    public final static String KEY_STEP = "selected_step";
-    public static final String KEY_NUMB = "step_number";
-    public static final String KEY_PLAYER_POS = "stopped_play_at";
-
     private Unbinder viewUnbind;
     private List<StepsModel> steps;
     private int stepSize;
@@ -96,6 +94,7 @@ public class DetailsFragment extends Fragment {
     private Activity activity;
     private String videoUrl;
     private long playerPosition;
+    private boolean isPlaying;
     private SimpleExoPlayer exoPlayer;
     private MediaSessionCompat mediaSession;
     private BandwidthMeter bandwidthMeter;
@@ -106,12 +105,6 @@ public class DetailsFragment extends Fragment {
     /*¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯
        Fundamentals */
 
-    @Override
-    public void onAttach(Context context) {
-        super.onAttach(context);
-
-    }
-
     public static DetailsFragment newInstance(List<StepsModel> steps, int position) {
         Bundle bundle = new Bundle();
         bundle.putParcelableArrayList(KEY_STEP, new ArrayList<Parcelable>(steps));
@@ -121,6 +114,12 @@ public class DetailsFragment extends Fragment {
         fragment.setArguments(bundle);
 
         return fragment;
+    }
+
+    @Override
+    public void onAttach(Context context) {
+        super.onAttach(context);
+
     }
 
     @Override
@@ -138,6 +137,7 @@ public class DetailsFragment extends Fragment {
         if (savedInstanceState != null) {
             listPos = savedInstanceState.getInt(KEY_NUMB);
             playerPosition = savedInstanceState.getLong(KEY_PLAYER_POS);
+            isPlaying = savedInstanceState.getBoolean(KEY_PLAYER_PLAYS, false);
         }
 
         addData();
@@ -184,6 +184,7 @@ public class DetailsFragment extends Fragment {
         if (playerPosition != 0) {
             outState.putLong(KEY_PLAYER_POS, playerPosition);
         }
+        outState.putBoolean(KEY_PLAYER_PLAYS, isPlaying);
     }
 
     /*____________________________________________________________________________________________*/
@@ -209,7 +210,7 @@ public class DetailsFragment extends Fragment {
         if (listPos < 0) {
             listPos = stepSize - 1;
         }
-        if(exoPlayer != null){
+        if (exoPlayer != null) {
             exoPlayer.stop();
             playerPosition = 0;
         }
@@ -224,7 +225,7 @@ public class DetailsFragment extends Fragment {
         if (listPos > stepSize - 1) {
             listPos = 0;
         }
-        if(exoPlayer != null){
+        if (exoPlayer != null) {
             exoPlayer.stop();
             playerPosition = 0;
         }
@@ -326,7 +327,7 @@ public class DetailsFragment extends Fragment {
 
         exoPlayer.prepare(mediaSource);
 
-        exoPlayer.setPlayWhenReady(true);
+        exoPlayer.setPlayWhenReady(isPlaying);
         exoPlayer.seekTo(playerPosition);
 
     }
@@ -337,6 +338,7 @@ public class DetailsFragment extends Fragment {
     private void cleanPlayer() {
         if (exoPlayer != null) {
             playerPosition = exoPlayer.getCurrentPosition();
+            isPlaying = exoPlayer.getPlayWhenReady();
             exoPlayer.stop();
             exoPlayer.release();
             exoPlayer = null;

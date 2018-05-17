@@ -45,10 +45,11 @@
         </activity>
         <activity
             android:name=".RecipeActivity"
-            android:theme="@style/AppTheme.NoActionBar" />
+            android:parentActivityName=".MainActivity" />
         <activity
             android:name=".DetailsActivity"
-            android:label="@string/label_details" />
+            android:label="@string/label_details"
+            android:parentActivityName=".MainActivity" />
 
         <receiver android:name=".widget.RecipeWidgetProvider">
             <intent-filter>

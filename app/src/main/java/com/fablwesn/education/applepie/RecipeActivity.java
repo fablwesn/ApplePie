@@ -26,7 +26,10 @@ package com.fablwesn.education.applepie;
 
 import android.os.Bundle;
 import android.support.v4.app.Fragment;
+import android.support.v4.app.NavUtils;
+import android.support.v7.app.ActionBar;
 import android.support.v7.app.AppCompatActivity;
+import android.view.MenuItem;
 
 import com.fablwesn.education.applepie.adapters.MainRecyclerAdapter;
 import com.fablwesn.education.applepie.data.models.RecipeModel;
@@ -51,6 +54,10 @@ public class RecipeActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_recipe);
         ButterKnife.bind(this);
+        ActionBar actionBar = getSupportActionBar();
+        if (actionBar != null) {
+            actionBar.setDisplayHomeAsUpEnabled(true);
+        }
 
         // Get the clicked recipe
         recipe = getIntent().getParcelableExtra(MainRecyclerAdapter.KEY_EXTRA_RECIPE);
@@ -58,6 +65,16 @@ public class RecipeActivity extends AppCompatActivity {
         if(savedInstanceState == null){
             loadViews();
         }
+    }
+
+    @Override
+    public boolean onOptionsItemSelected(MenuItem item) {
+        switch (item.getItemId()) {
+            case android.R.id.home:
+                NavUtils.navigateUpFromSameTask(this);
+                return true;
+        }
+        return super.onOptionsItemSelected(item);
     }
 
     /*____________________________________________________________________________________________*/

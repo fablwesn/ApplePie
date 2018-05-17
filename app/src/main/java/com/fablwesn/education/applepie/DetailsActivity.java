@@ -26,7 +26,10 @@ package com.fablwesn.education.applepie;
 
 import android.content.Intent;
 import android.os.Bundle;
+import android.support.v4.app.NavUtils;
+import android.support.v7.app.ActionBar;
 import android.support.v7.app.AppCompatActivity;
+import android.view.MenuItem;
 
 import com.fablwesn.education.applepie.data.models.StepsModel;
 import com.fablwesn.education.applepie.fragments.DetailsFragment;
@@ -48,6 +51,10 @@ public class DetailsActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_step);
+        ActionBar actionBar = getSupportActionBar();
+        if (actionBar != null) {
+            actionBar.setDisplayHomeAsUpEnabled(true);
+        }
 
         // Load which step to display and then show it inside fragment
         Intent intent = getIntent();
@@ -58,6 +65,17 @@ public class DetailsActivity extends AppCompatActivity {
             DetailsFragment detailsFragment = DetailsFragment.newInstance(stepsList, stepPosition);
             getSupportFragmentManager().beginTransaction().add(R.id.details_container, detailsFragment).commit();
         }
+    }
+
+    @Override
+    public boolean onOptionsItemSelected(MenuItem item) {
+        switch (item.getItemId()) {
+            // Respond to the action bar's Up/Home button
+            case android.R.id.home:
+                NavUtils.navigateUpFromSameTask(this);
+                return true;
+        }
+        return super.onOptionsItemSelected(item);
     }
 
     /*____________________________________________________________________________________________*/

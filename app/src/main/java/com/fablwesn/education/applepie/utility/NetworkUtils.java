@@ -31,7 +31,7 @@ import android.net.NetworkInfo;
 import com.fablwesn.education.applepie.data.RecipeListService;
 import com.fablwesn.education.applepie.data.RetrofitClient;
 
-public class NetworkUtils {
+final public class NetworkUtils {
     private NetworkUtils(){
 
     }
